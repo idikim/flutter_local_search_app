@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_local_search_app/ui/pages/home/widgets/home_list_view.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -59,8 +60,25 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
+          actions: [
+            GestureDetector(
+              onTap: () {},
+              child: Container(
+                width: 50,
+                height: 50,
+                color: Colors.transparent,
+                child: Icon(Icons.gps_fixed),
+              ),
+            )
+          ],
         ),
-        body: Text('HomePage'),
+        body: Padding(
+          padding: EdgeInsets.all(20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [HomeListView()],
+          ),
+        ),
       ),
     );
   }
