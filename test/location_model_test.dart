@@ -5,7 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   String jsonString = """
     {
-      "title": "<b>코엑스</b>",
+      "title": "코엑스",
       "link": "http://www.coex.co.kr/",
       "category": "문화,예술>컨벤션센터",
       "description": "",
