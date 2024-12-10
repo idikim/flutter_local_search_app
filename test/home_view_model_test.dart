@@ -1,4 +1,4 @@
-import 'package:flutter_local_search_app/ui/pages/home/home_view_model.dart';
+import 'package:flutter_local_search_app/ui/home_view_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 

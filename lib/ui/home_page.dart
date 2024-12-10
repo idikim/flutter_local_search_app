@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_local_search_app/data/model/location.dart';
-import 'package:flutter_local_search_app/ui/pages/detail/detail_page.dart';
-import 'package:flutter_local_search_app/ui/pages/home/home_view_model.dart';
+import 'package:flutter_local_search_app/ui/detail_page.dart';
+import 'package:flutter_local_search_app/ui/home_view_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class HomePage extends ConsumerStatefulWidget {
