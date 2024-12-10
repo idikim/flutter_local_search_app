@@ -7,7 +7,7 @@ void main() {
     'Location Repository search test',
     () async {
       LocationRepository locationRepository = LocationRepository();
-      List<Location>? results = await locationRepository.search('코엑스');
+      List<Location>? results = await locationRepository.search('삼성동');
       expect(results != null, true);
       expect(results!.isNotEmpty, true);
 
