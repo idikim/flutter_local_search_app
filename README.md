@@ -1,16 +1,15 @@
-# flutter_local_search_app
+# 🔍 지역 검색 앱
 
-A new Flutter project.
+플러터 기반의 지역 정보 검색 어플리케이션입니다.
 
-## Getting Started
+<br>
 
-This project is a starting point for a Flutter application.
+## 프로젝트 기능
 
-A few resources to get you started if this is your first Flutter project:
+- 네이버 검색 Open API 를 이용하여 지역검색 기능을 제공합니다.
+- 검색어 관련장소를 정확도 순으로 최대 5개까지 출력합니다.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    (장소명 / 카테고리 / 도로명 주소)
+- 검색결과 링크를 WebView로 볼 수 있습니다.
+- Riverpod을 이용한 MVVM구조로 설계되었습니다.
