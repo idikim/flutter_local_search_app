@@ -105,18 +105,23 @@ class _HomePageState extends ConsumerState<HomePage> {
   }
 
   Widget item(Location location) {
+    print('location: ${location.link}');
     return Builder(
       builder: (context) {
         return GestureDetector(
           onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return DetailPage(location.link);
-                },
-              ),
-            );
+            if (location.link.startsWith('https')) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return DetailPage(
+                      link: location.link,
+                    );
+                  },
+                ),
+              );
+            }
           },
           child: SizedBox(
             height: 120,
