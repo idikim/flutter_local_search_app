@@ -5,6 +5,8 @@ import 'package:flutter_local_search_app/ui/home_view_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class HomePage extends ConsumerStatefulWidget {
+  const HomePage({super.key});
+
   @override
   ConsumerState<HomePage> createState() => _HomePageState();
 }
@@ -111,7 +113,7 @@ class _HomePageState extends ConsumerState<HomePage> {
               context,
               MaterialPageRoute(
                 builder: (context) {
-                  return DetailPage();
+                  return DetailPage(location.link);
                 },
               ),
             );
@@ -133,7 +135,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    location.title,
+                    location.title.stripHtml(),
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
@@ -154,6 +156,8 @@ class _HomePageState extends ConsumerState<HomePage> {
                       color: Colors.black54,
                       fontSize: 14,
                     ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   )
                 ],
               ),
@@ -163,4 +167,9 @@ class _HomePageState extends ConsumerState<HomePage> {
       },
     );
   }
+}
+
+//html 태그 제거
+extension StringExtension on String {
+  String stripHtml() => replaceAll(RegExp(r'<[^>]*>|&[^;]+;'), '');
 }
